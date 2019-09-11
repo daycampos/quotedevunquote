@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
+    "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "webpack": "^4.39.3",
@@ -33,7 +34,7 @@
       "@babel/react"
     ],
     "plugins": [
-      "@babel/plugin-transform-arrow-functions", 
+      "@babel/plugin-transform-arrow-functions",
       "babel-plugin-emotion"
     ]
   }
