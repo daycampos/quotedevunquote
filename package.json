@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js",
-    "build": "react-scripts build",
+    "build":"./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
   },
