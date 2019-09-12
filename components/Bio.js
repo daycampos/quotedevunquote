@@ -4,7 +4,8 @@ import styled from '@emotion/styled';
 class Bio extends React.PureComponent{
     render(){
         const Bio = styled.aside`
-            font-size:12px;
+            font-size:1em;
+            max-width:450px;
         `
         return(
             <Bio>
