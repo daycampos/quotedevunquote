@@ -1,16 +1,18 @@
+/** @jsx jsx */
 import React from 'react';
-import styled from '@emotion/styled';
+import {jsx} from '@emotion/core';
 
 class Bio extends React.PureComponent{
     render(){
-        const Bio = styled.aside`
-            font-size:1em;
-            max-width:450px;
-        `
         return(
-            <Bio>
+            <aside
+                css={{
+                    fontSize:'1em',
+                    maxWidth:450,
+                }}
+            >
                 {this.props.text}
-            </Bio>
+            </aside>
         )
     }
 }

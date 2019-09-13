@@ -1,28 +1,22 @@
+/** @jsx jsx */
+
 import React from 'react';
-import styled from '@emotion/styled';
-
-
-
+import {jsx} from '@emotion/core';
 
 class Post extends React.PureComponent{
     render(){
-        const Post = styled.p`
-            font-size:1em;
-            
-            
-        `
-        const PostTitle = styled.h2`font-size:1.5em`
-        const Wrapper = styled.div`margin-top:60px;`
-
+        
         return(
-            <Wrapper>
-                <PostTitle>
+            <div css={{marginTop:60}}>
+                <h2 css={{fontSize:'1.5em'}}>
                     O primeiro Lorem ipsum
-                </PostTitle>
-                <Post>
+                </h2>
+                <p css={{
+                    fontSize:'1em'
+                }}>
                     {this.props.text}
-                </Post>
-            </Wrapper>
+                </p>
+            </div>
         )
     }
 }

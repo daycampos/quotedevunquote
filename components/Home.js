@@ -5,6 +5,7 @@ import Header from './Header';
 import Title from './Title';
 import Bio from './Bio';
 import Post from './Post';
+import Avatar from './Avatar';
 
 export default class Home extends React.Component{
     render(){
@@ -20,13 +21,14 @@ export default class Home extends React.Component{
             <Global
       styles={css`
         * {
-            @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto&display=swap');
             body {
-                font-family: 'Open Sans', sans-serif;
-                color:#111111;
+                font-family: 'Roboto', sans-serif;
+                color:#222222;
             }
             h1,h2,h3 {
-                font-family: 'Abril Fatface', cursive;
+                font-family: 'Playfair Display', serif;
+                font-weight:900;
             }
             h1{
                 color:#222222;
@@ -40,6 +42,7 @@ export default class Home extends React.Component{
             <Container>
                 <Header>
                     <Title title="quote dev unquote"/>
+
                     <Bio text={
                         `Esse blog surgiu como uma forma de me ajudar
                         a estudar e praticar conceitos de desenvolvimento web.`
