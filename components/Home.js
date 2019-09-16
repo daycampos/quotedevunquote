@@ -1,3 +1,4 @@
+/** @jsx jsx */
 import React from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/core'
@@ -6,14 +7,17 @@ import Title from './Title';
 import Bio from './Bio';
 import Post from './Post';
 import Avatar from './Avatar';
+import Footer from './Footer';
+import { jsx } from '@emotion/core';
 
 export default class Home extends React.Component{
     render(){
         const Container = styled.div`
             margin-left:auto; 
             margin-right:auto;
+            padding: 2.625rem 1.3125rem;
             max-width:42em;
-            background-color:#fffff8
+            backgroundColor:#ff00ff;
         `
         
         return(
@@ -40,6 +44,13 @@ export default class Home extends React.Component{
       `}
         />
             <Container>
+                <div css={{
+                    backgroundColor:'#ff00ff',
+                    height:'100%',
+                    width:'100%'
+                }}>
+
+                </div>
                 <Header>
                     <Title title="quote dev unquote"/>
 
@@ -54,6 +65,7 @@ export default class Home extends React.Component{
                     primeiro texto oficial para ele, então por enquanto é isso aqui que temos. 
                 `
                 }/>
+                <Footer/>
             </Container>
             </div>
         );
