@@ -11,24 +11,29 @@ import Footer from './Footer';
 import { jsx } from '@emotion/core';
 
 export default class Home extends React.Component{
+          
     render(){
-        const Container = styled.div`
-            margin-left:auto; 
-            margin-right:auto;
-            padding: 2.625rem 1.3125rem;
-            max-width:42em;
-            backgroundColor:#ff00ff;
-        `
-        
         return(
-            <div>
-            <Global
+            <div css={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100vh', 
+                maxWidth:'42em', 
+                marginLeft:'auto',
+                marginRight:'auto',
+            }}>
+                <Global
       styles={css`
         * {
             @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto&display=swap');
-            body {
+            
+            body {
                 font-family: 'Roboto', sans-serif;
                 color:#222222;
+                margin:0;
+                background-color:#f5f5f5;
+                line-height:1.5em;
+
             }
             h1,h2,h3 {
                 font-family: 'Playfair Display', serif;
@@ -38,35 +43,36 @@ export default class Home extends React.Component{
                 color:#222222;
             }
             h2,h3{
-                color:#364DC3;
+                color:#3548b6;
             }
         }
       `}
         />
-            <Container>
                 <div css={{
-                    backgroundColor:'#ff00ff',
-                    height:'100%',
-                    width:'100%'
+                    flex: '1 0 auto',
+                    padding: '2.6em  1.3em', 
                 }}>
-
-                </div>
-                <Header>
-                    <Title title="quote dev unquote"/>
-
-                    <Bio text={
-                        `Esse blog surgiu como uma forma de me ajudar
-                        a estudar e praticar conceitos de desenvolvimento web.`
-                    }/>
-                </Header>
+                    <Header>
+                        <Title title="quote dev unquote"/>
+                    </Header>
+                    <aside css={{
+                        display:'flex',
+                        alignItems:'center',
+                    }}>
+                        <Avatar/>
+                        <Bio text={
+                            `Esse blog surgiu como uma forma de me ajudar
+                            a estudar e praticar conceitos de desenvolvimento web.`
+                        }/>
+                    </aside>
                 <Post text={`
-                    O ruim de construir um blog é que depois você precisa escrever nele! 
-                    Eu finalmente consegui colocar o blog no ar, mas ainda não tenho um 
-                    primeiro texto oficial para ele, então por enquanto é isso aqui que temos. 
-                `
+                     O ruim de construir um blog é que depois você precisa escrever nele! 
+                     Eu finalmente consegui colocar o blog no ar, mas ainda não tenho um 
+                     primeiro texto oficial para ele, então por enquanto é isso aqui que temos. 
+                 `
                 }/>
+                </div>
                 <Footer/>
-            </Container>
             </div>
         );
     }
