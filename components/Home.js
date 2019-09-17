@@ -6,7 +6,7 @@ import Header from './Header';
 import Title from './Title';
 import Bio from './Bio';
 import Post from './Post';
-import Avatar from './Avatar';
+// import Avatar from './Avatar';
 import Footer from './Footer';
 import { jsx } from '@emotion/core';
 
@@ -59,7 +59,6 @@ export default class Home extends React.Component{
                         display:'flex',
                         alignItems:'center',
                     }}>
-                        <Avatar/>
                         <Bio text={
                             `Esse blog surgiu como uma forma de me ajudar
                             a estudar e praticar conceitos de desenvolvimento web.`
